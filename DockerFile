@@ -1,0 +1,12 @@
+FROM mcr.microsoft.com/windows/servercore:1809
+
+MAINTAINER dockerman@madmunki.com
+
+RUN md steamcmd
+
+WORKDIR steamcmd
+
+COPY steamcmd.exe steamcmd.exe
+
+RUN steamcmd.exe +login anonymous +quit
+
